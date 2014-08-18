@@ -20,22 +20,22 @@ In this link you can download the demo app.
 
 1. Create the xml
 ```xml
-    <com.franlopez.flipcheckbox.FlipCheckBox
-        android:id="@+id/flipCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:frontView="@layout/custom_flipcheckbox_front"
-        app:isChecked="false"
-        app:resourceAccept="@drawable/ic_launcher" />
+<com.franlopez.flipcheckbox.FlipCheckBox
+    android:id="@+id/flipCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:frontView="@layout/custom_flipcheckbox_front"
+    app:isChecked="false"
+    app:resourceAccept="@drawable/ic_launcher" />
 ```
 
 2. Initialize component
 ```java
 
-	      FlipCheckBox flipCheckbox = (FlipCheckBox) convertView.findViewById(R.id.flipCheckbox);
+  FlipCheckBox flipCheckbox = (FlipCheckBox) convertView.findViewById(R.id.flipCheckbox);
 
-	      // When the item is selected:
-	      flipCheckbox.setCheckedWithAnimation(!flipCheckbox.isChecked());
+  // When the item is selected:
+  flipCheckbox.setCheckedWithAnimation(!flipCheckbox.isChecked());
 ```
 ## License
 

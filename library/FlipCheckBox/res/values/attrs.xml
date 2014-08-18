@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FlipCheckBox">
+        <attr name="isChecked" format="boolean" />
+        <attr name="frontView" format="reference" />
+        <attr name="backgroundBackView" format="reference" />
+        <attr name="resourceAccept" format="reference" />
+    </declare-styleable>
+
+</resources>
