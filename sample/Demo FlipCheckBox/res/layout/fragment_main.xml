@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="10dp" >
+
+    <Button
+        android:id="@+id/btn__main__normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="16dp"
+        android:text="Normal Style (ListView)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn__main__custom_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn__main__normal_style"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="16dp"
+        android:text="Custom View Style (ListView)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn__main__custom_style_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn__main__custom_view_style"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="16dp"
+        android:text="Custom View Style (GridView)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn__main__custom_accept_style_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn__main__custom_style_grid"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="16dp"
+        android:text="Custom Accept Style (GridView)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv__main__about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:text="FlipCheckBox by Fran López"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>
