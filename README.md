@@ -9,6 +9,8 @@ Is a Animated CheckBox with custom views
 
 In this link you can download the demo app.
 
+<a href="https://play.google.com/store/apps/details?id=com.franlopez.demoflipcheckbox">App in Google Play</a>
+
 ## Configurations
 
 1. frontView: define the layout for Front View
