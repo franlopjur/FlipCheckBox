@@ -14,9 +14,6 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import com.franlopez.demoflipcheckbox.R;
-import com.franlopez.demoflipcheckbox.R.id;
-import com.franlopez.demoflipcheckbox.R.layout;
-import com.franlopez.demoflipcheckbox.R.menu;
 import com.franlopez.demoflipcheckbox.adapters.CustomAcceptElementsGridAdapter;
 import com.franlopez.demoflipcheckbox.model.ModelElement;
 

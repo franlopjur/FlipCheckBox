@@ -9,15 +9,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.franlopez.demoflipcheckbox.R;
-import com.franlopez.demoflipcheckbox.R.id;
-import com.franlopez.demoflipcheckbox.R.layout;
 import com.franlopez.demoflipcheckbox.model.ModelElement;
+import com.franlopez.demoflipcheckbox.util.DemoConstants;
 import com.franlopez.flipcheckbox.FlipCheckBox;
-import com.franlopez.flipcheckbox.OnFlipCheckedChangeListener;
 import com.squareup.picasso.Picasso;
 
 
@@ -67,7 +63,7 @@ public class CustomAcceptElementsGridAdapter extends BaseAdapter {
 		holder.flipCard.setChecked(getItem(position).isChecked());
 		
 		if(holder.flipCard.getFrontView() != null)
-			Picasso.with(mContext).load("http://www.franciscomlopez.com/wp-content/uploads/2014/01/cropped-logo_web_franciscomlopez.png").into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
+			Picasso.with(mContext).load(DemoConstants.URL_IMAGE).into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
 		
 		convertView.setOnClickListener(new OnClickListener() {
 			

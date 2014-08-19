@@ -3,14 +3,13 @@ package com.franlopez.demoflipcheckbox.model;
 public class ModelElement {
 
 	private String title;
+	private boolean checked;
 
 	public ModelElement(String title, boolean checked) {
 		super();
 		this.title = title;
 		this.checked = checked;
 	}
-
-	private boolean checked;
 
 	public String getTitle() {
 		return title;

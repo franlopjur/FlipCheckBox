@@ -9,18 +9,15 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.franlopez.demoflipcheckbox.R;
-import com.franlopez.demoflipcheckbox.R.id;
-import com.franlopez.demoflipcheckbox.R.layout;
 import com.franlopez.demoflipcheckbox.model.ModelElement;
 import com.franlopez.flipcheckbox.FlipCheckBox;
-import com.franlopez.flipcheckbox.OnFlipCheckedChangeListener;
 
 
 public class NormalElementsAdapter extends BaseAdapter {
 	
+	@SuppressWarnings("unused")
 	private Context mContext;
 	private LayoutInflater mLayoutInflater;
 	private List<ModelElement> mDataSet;

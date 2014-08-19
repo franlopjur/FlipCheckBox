@@ -12,9 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.franlopez.demoflipcheckbox.R;
-import com.franlopez.demoflipcheckbox.R.id;
-import com.franlopez.demoflipcheckbox.R.layout;
 import com.franlopez.demoflipcheckbox.model.ModelElement;
+import com.franlopez.demoflipcheckbox.util.DemoConstants;
 import com.franlopez.flipcheckbox.FlipCheckBox;
 import com.squareup.picasso.Picasso;
 
@@ -76,7 +75,7 @@ public class CustomElementsAdapter extends BaseAdapter {
 		});
 		
 		if(holder.flipCard.getFrontView() != null && holder.flipCard != null)
-			Picasso.with(mContext).load("http://www.franciscomlopez.com/wp-content/uploads/2014/01/cropped-logo_web_franciscomlopez.png").into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
+			Picasso.with(mContext).load(DemoConstants.URL_IMAGE).into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
 		
 		holder.flipCard.setDurationAnimation(2000);
 	    holder.title.setText(getItem(position).getTitle());

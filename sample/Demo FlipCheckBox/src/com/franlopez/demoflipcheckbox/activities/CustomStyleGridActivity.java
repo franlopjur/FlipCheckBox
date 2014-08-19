@@ -3,13 +3,6 @@ package com.franlopez.demoflipcheckbox.activities;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.franlopez.demoflipcheckbox.R;
-import com.franlopez.demoflipcheckbox.R.id;
-import com.franlopez.demoflipcheckbox.R.layout;
-import com.franlopez.demoflipcheckbox.R.menu;
-import com.franlopez.demoflipcheckbox.adapters.CustomElementsGridAdapter;
-import com.franlopez.demoflipcheckbox.model.ModelElement;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -19,7 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.ListView;
+
+import com.franlopez.demoflipcheckbox.R;
+import com.franlopez.demoflipcheckbox.adapters.CustomElementsGridAdapter;
+import com.franlopez.demoflipcheckbox.model.ModelElement;
 
 public class CustomStyleGridActivity extends ActionBarActivity {
 
