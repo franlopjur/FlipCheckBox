@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewFlipper"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <ViewFlipper
-        android:id="@+id/viewFlipper"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    <include android:id="@+id/inclide_front" layout="@layout/simple_card_front" />
 
-        <include android:id="@+id/inclide_front" layout="@layout/simple_card_front" />
-
-        <include android:id="@+id/inclide_back" layout="@layout/simple_card_back" />
-    </ViewFlipper>
-
-</LinearLayout>
+    <include android:id="@+id/inclide_back" layout="@layout/simple_card_back" />
+</merge>
