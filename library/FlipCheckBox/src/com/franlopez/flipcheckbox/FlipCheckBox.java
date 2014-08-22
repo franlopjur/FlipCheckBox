@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 /**
@@ -26,7 +25,7 @@ import android.widget.ViewFlipper;
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
 	and limitations under the License.
  */
-public class FlipCheckBox extends LinearLayout {
+public class FlipCheckBox extends ViewFlipper {
 
 	/**
 	 * Status available
@@ -88,7 +87,7 @@ public class FlipCheckBox extends LinearLayout {
 	
 	private void getView(View view) {
 		
-		mViewFlipper = (ViewFlipper) view.findViewById(R.id.viewFlipper);
+		mViewFlipper = (ViewFlipper) view;
 		mIVOk = (ImageView) mViewFlipper.findViewById(R.id.inclide_back).findViewById(R.id.iv__card_back__ok);
 	}
 	
