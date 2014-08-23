@@ -12,8 +12,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:descendantFocusability="blocksDescendants"
-        app:frontView="@layout/custom_flipcheckbox_front"
-        app:isChecked="false" />
+        app:frontLayout="@layout/custom_flipcheckbox_front"
+        app:checked="false" />
 
     <TextView
         android:id="@+id/text"

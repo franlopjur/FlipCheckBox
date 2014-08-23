@@ -67,13 +67,13 @@ public class NormalElementsAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				
-				holder.flipCard.setCheckedWithAnimation(!getItem(position).isChecked());
+				holder.flipCard.setChecked(!getItem(position).isChecked());
 				getItem(position).setChecked(!getItem(position).isChecked());
 				notifyDataSetChanged();
 			}
 		});
 		
-		holder.flipCard.setDurationAnimation(2000);
+		holder.flipCard.setFlipAnimationDuration(100l);
 	    holder.title.setText(getItem(position).getTitle());
 	    
 	    return convertView;

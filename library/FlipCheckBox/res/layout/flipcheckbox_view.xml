@@ -9,9 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <include android:id="@+id/inclide_front" layout="@layout/simple_card_front" />
+        <include android:id="@+id/include_front" layout="@layout/simple_card_front" />
 
-        <include android:id="@+id/inclide_back" layout="@layout/simple_card_back" />
+        <include android:id="@+id/include_back" layout="@layout/simple_card_back" />
     </ViewFlipper>
 
 </LinearLayout>
