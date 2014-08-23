@@ -49,11 +49,10 @@ import android.widget.ViewFlipper;
  * @author Francisco Manuel Lopez Jurado
  */
 public class FlipCheckBox extends LinearLayout implements OnClickListener {
-	
+
 	/*
-	 * TODO list:
-	 * - Image "accept" animation customizable
-	 * - Rear face customization (not just color)
+	 * TODO list: - Image "accept" animation customizable - Rear face
+	 * customization (not just color)
 	 */
 
 	/** Dummy listener to prevent NPE's. */
@@ -375,14 +374,14 @@ public class FlipCheckBox extends LinearLayout implements OnClickListener {
 		mChecked = checked;
 		mViewFlipper.setDisplayedChild(checked ? STATUS_CHECKED
 				: STATUS_NOT_CHECKED);
-		if (checked)
+		if (isChecked())
 			mIVAccept.startAnimation(acceptAnimation);
-		mOnCheckedChangeListener.onCheckedChanged(this, mChecked);
+		mOnCheckedChangeListener.onCheckedChanged(this, isChecked());
 	}
 
 	/**
 	 * Set the state of this component to the given value, without applying the
-	 * corresponding animation.
+	 * corresponding animation, and without firing an event.
 	 * 
 	 * @param checked
 	 *            The component state.
@@ -397,7 +396,6 @@ public class FlipCheckBox extends LinearLayout implements OnClickListener {
 				: STATUS_NOT_CHECKED);
 		initInAnimation();
 		initOutAnimation();
-		mOnCheckedChangeListener.onCheckedChanged(this, mChecked);
 	}
 
 	/**
@@ -562,7 +560,7 @@ public class FlipCheckBox extends LinearLayout implements OnClickListener {
 		setShowAcceptImage(ss.showAcceptImage);
 		requestLayout();
 	}
-	
+
 	static class SavedState extends BaseSavedState {
 		boolean checked;
 		boolean showAnimations;
