@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants"
-        app:isChecked="false" />
+        app:checked="false" />
 
     <TextView
         android:id="@+id/text"

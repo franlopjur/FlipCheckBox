@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="fcb__light_green">#ff99cc00</color>
+
+    <!-- Default color to apply onto front view when none is provided -->
+    <color name="fcb__front_color">#ffff0000</color>
+    <!-- Default color to apply onto rear view when none is provided -->
+    <drawable name="fcb__rear_color">#ff99cc00</drawable>
+
 </resources>

@@ -24,7 +24,8 @@
         android:padding="16dp"
         android:text="Custom View Style (ListView)"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn__main__custom_style_grid"
@@ -36,7 +37,8 @@
         android:padding="16dp"
         android:text="Custom View Style (GridView)"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn__main__custom_accept_style_grid"
@@ -48,7 +50,8 @@
         android:padding="16dp"
         android:text="Custom Accept Style (GridView)"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tv__main__about"

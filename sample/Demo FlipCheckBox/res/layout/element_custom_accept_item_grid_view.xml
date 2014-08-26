@@ -10,8 +10,8 @@
         android:id="@+id/flipCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:frontView="@layout/custom_flipcheckbox_front"
-        app:isChecked="false"
-        app:resourceAccept="@drawable/ic_launcher" />
+        app:frontLayout="@layout/custom_flipcheckbox_front"
+        app:checked="false"
+        app:rearAcceptImage="@drawable/ic_launcher" />
 
 </LinearLayout>

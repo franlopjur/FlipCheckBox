@@ -68,7 +68,7 @@ public class CustomElementsAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				
-				holder.flipCard.setCheckedWithAnimation(!getItem(position).isChecked());
+				holder.flipCard.setChecked(!getItem(position).isChecked());
 				getItem(position).setChecked(!getItem(position).isChecked());
 				notifyDataSetChanged();
 			}
@@ -77,7 +77,7 @@ public class CustomElementsAdapter extends BaseAdapter {
 		if(holder.flipCard.getFrontView() != null && holder.flipCard != null)
 			Picasso.with(mContext).load(DemoConstants.URL_IMAGE).into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
 		
-		holder.flipCard.setDurationAnimation(2000);
+		holder.flipCard.setFlipAnimationDuration(2000l);
 	    holder.title.setText(getItem(position).getTitle());
 	    
 	    return convertView;
