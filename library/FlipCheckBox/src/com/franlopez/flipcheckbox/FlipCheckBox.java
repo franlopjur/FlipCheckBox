@@ -12,7 +12,6 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 /*
@@ -48,7 +47,7 @@ import android.widget.ViewFlipper;
  * 
  * @author Francisco Manuel Lopez Jurado
  */
-public class FlipCheckBox extends LinearLayout implements OnClickListener {
+public class FlipCheckBox extends ViewFlipper implements OnClickListener {
 
 	/*
 	 * TODO list: - Image "accept" animation customizable - Rear face
@@ -232,7 +231,7 @@ public class FlipCheckBox extends LinearLayout implements OnClickListener {
 	 * Find this component's view references.
 	 */
 	private void findViewReferences() {
-		mViewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
+		mViewFlipper = (ViewFlipper) this;
 		mIVAccept = (ImageView) mViewFlipper.findViewById(R.id.include_back)
 				.findViewById(R.id.iv__card_back__accept);
 	}

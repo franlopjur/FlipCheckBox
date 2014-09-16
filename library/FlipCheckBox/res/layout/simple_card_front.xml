@@ -3,10 +3,10 @@
 Placeholder for the front view, to be set if no one is provided. The
 front view represents the "not checked" state.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fcb__front_color"
     android:orientation="vertical" >
 
-</LinearLayout>
+</FrameLayout>
