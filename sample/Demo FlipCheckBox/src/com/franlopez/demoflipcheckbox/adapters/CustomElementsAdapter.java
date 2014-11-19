@@ -5,7 +5,6 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -15,6 +14,7 @@ import com.franlopez.demoflipcheckbox.R;
 import com.franlopez.demoflipcheckbox.model.ModelElement;
 import com.franlopez.demoflipcheckbox.util.DemoConstants;
 import com.franlopez.flipcheckbox.FlipCheckBox;
+import com.franlopez.flipcheckbox.OnFlipCheckedChangeListener;
 import com.squareup.picasso.Picasso;
 
 public class CustomElementsAdapter extends BaseAdapter {
@@ -47,6 +47,9 @@ public class CustomElementsAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
+		
+		final ModelElement item = getItem(position);
+		
 		final ViewHolder holder;
 		if(convertView == null) {
 	      convertView = mLayoutInflater.inflate(R.layout.element_custom_item_view, null);
@@ -61,23 +64,15 @@ public class CustomElementsAdapter extends BaseAdapter {
 	      holder = (ViewHolder)convertView.getTag();
 	    }
 	 
-		holder.flipCard.setChecked(getItem(position).isChecked());
-		
-		convertView.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				holder.flipCard.setChecked(!getItem(position).isChecked());
-				getItem(position).setChecked(!getItem(position).isChecked());
-				notifyDataSetChanged();
-			}
-		});
+		holder.flipCard.setCheckedInmediate(item.isChecked());
+		holder.flipCard
+		.setOnFlipCheckedChangeListener(new OnCheckedChangeListener(
+				item));
 		
 		if(holder.flipCard.getFrontView() != null && holder.flipCard != null)
 			Picasso.with(mContext).load(DemoConstants.URL_IMAGE).into((ImageView) holder.flipCard.getFrontView().findViewById(R.id.image));
 		
-		holder.flipCard.setFlipAnimationDuration(2000l);
+		holder.flipCard.setFlipAnimationDuration(150l);
 	    holder.title.setText(getItem(position).getTitle());
 	    
 	    return convertView;
@@ -93,5 +88,21 @@ public class CustomElementsAdapter extends BaseAdapter {
 
 		mDataSet = posts;
 		notifyDataSetChanged();
+	}
+	
+	private class OnCheckedChangeListener implements OnFlipCheckedChangeListener {
+	
+		
+		final ModelElement item;
+	
+		public OnCheckedChangeListener(ModelElement item) {
+			this.item = item;
+		}
+		
+		@Override
+		public void onCheckedChanged(FlipCheckBox flipCardView,
+				boolean isChecked) {
+			item.setChecked(isChecked);
+		}
 	}
 }
