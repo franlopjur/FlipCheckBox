@@ -1,13 +1,13 @@
 FlipCheckBox
 ====
 
-###Description
+### Description
 
 Give your collections (on any `View` at all) a fancier look by adding a cool way to check elements. If your list can multi-select elements, you can add this component as a "status indicator". This is basically a customizable view flipper, with a "_front_" and "_rear_" faces, and an "accept" image in the "_rear_" that will animate changes in its state, mostly like the [GMail][1] app.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FlipCheckBox-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/944)
 
-###Usage
+### Usage
 
 The component will remain decoupled from any other `View` at all time, needing only an Activity context in order to work properly (for inflation purposes basically). You can inflate this component, as well as apply attributes, from `xml` or programmatically.
 <br/>
@@ -32,18 +32,18 @@ Currently supported attributes are:
 
 The component also presents an interface (`OnFlipCheckedChangeListener`) which will receive events when the state change. Please, keep in mind that the library methods `setChecked(boolean)` and `switchChecked()` will fire an event when called, while `setCheckedInmediate(boolean)` **will not**.
 
-###Demo App
+### Demo App
 
 You can download a demo app from [this][3] link.
 
-###Contribution
+### Contribution
 
 * [Santiago Gonzàlez Bertran][4]
 * [Ignasi Busquets][5]
 
 Thanks for all!
 
-###License
+### License
 
     Copyright 2014 Francisco Manuel López Jurado
 
